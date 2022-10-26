@@ -109,22 +109,22 @@ footer .textos{
 .grid{
     display:grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 5% 10% 70% 5% 10%;
     grid-template-areas:
     'header'
     'search'
     'main'
     'paginator'
     'footer';
-    
+    height:100vh
 }
 .grid-container_main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    justify-content:space-around;
-    align-items: space-around;
+    justify-content:center;
+    align-items: center;
     overflow: auto;
-    height: 80vh; 
 }
 
 /*Card start*/
@@ -175,9 +175,17 @@ footer .textos{
     .hamburger {
         display: none;
     }
+    .menu{
+        font-size: 16px;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
     .grid{
         display:grid;
         grid-template-columns: 25% 75%;
+        grid-template-rows: 10% 75% 5% 10%;
         grid-template-areas:
         'header  header'
         'search main'
@@ -189,13 +197,7 @@ footer .textos{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .menu{
-        font-size: 16px;
-        text-align: center;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
+   
     .menu ul{
         text-align: center;
         display: flex;
@@ -215,6 +217,7 @@ footer .textos{
     .grid{
         display:grid;
         grid-template-columns: 15% 85%;
+        grid-template-rows: 10% 75% 5% 10%;
         grid-template-areas:
         'header search'
         'header main'
