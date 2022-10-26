@@ -1,0 +1,257 @@
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+
+/*Header Start*/
+
+header {
+    grid-area: header;
+    background-color: #00579c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+header .titulo{
+    font-size: 16px;
+}
+
+.menu{
+    display: none;
+}
+/*Header End*/
+
+/*Search Start*/
+search{
+    padding: 10px;
+    text-align: center;
+    grid-area: search;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+}
+select {
+    width: 100%;
+    padding: 5px;
+}
+
+/*Search End*/
+
+/*Main Start*/
+main{
+    padding: 10px;
+    text-align: center;
+    grid-area: main;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+}
+
+/*Main End*/
+
+/*Paginator start*/
+paginator{
+    padding: 10px;
+    text-align: center;
+    grid-area: paginator;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+paginator a{
+    color: #279ffa;
+    padding: 8px;
+    border:1px solid #f4f2f2;
+    font-weight: 500;
+    font-size: 12px;
+}
+/*Paginator end*/
+
+/*Footer Start*/
+footer{
+    padding: 10px;
+    text-align: center;
+    grid-area: footer;
+    color: white;
+    background-color: #012f6b;
+    display: flex;
+    flex-direction: column;
+    
+}
+footer .textos{
+    font-weight: 500;
+    font-size: 10px;
+}
+
+/*Footer End*/
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'header'
+    'search'
+    'main'
+    'paginator'
+    'footer';
+    
+}
+.grid-container_main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content:space-around;
+    align-items: space-around;
+    overflow: auto;
+    height: 80vh; 
+}
+
+/*Card start*/
+.card{
+    background-color: white;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+}
+.card .image{
+    margin: 0;
+    padding: 0;
+}
+.card .title{
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+}
+.card .link{
+    color: white;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px;
+}
+.card img{
+    width:100%;
+    height:100%;
+}
+.card .button {
+    background-color: #00579c;
+    border: none;
+    width: 60px;
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px;
+}
+/* Card end*/
+
+/* Escritorio Start*/
+@media (min-width: 576px) {
+    .hamburger {
+        display: none;
+    }
+    .grid{
+        display:grid;
+        grid-template-columns: 25% 75%;
+        grid-template-areas:
+        'header  header'
+        'search main'
+        'paginator paginator'
+        'footer footer';
+
+    }
+    .grid-container_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu{
+        font-size: 16px;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .menu ul{
+        text-align: center;
+        display: flex;
+        flex-direction:row;
+        justify-content:flex-end;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .menu li{
+        padding: 5px;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .grid{
+        display:grid;
+        grid-template-columns: 15% 85%;
+        grid-template-areas:
+        'header search'
+        'header main'
+        'header paginator'
+        'footer paginator';
+    }
+    .grid-container_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    header .titulo{
+        font-size: 16px;
+        text-align: center;
+        padding: 0 0 10px 0;
+    }
+    .menu{
+        font-size: 15px;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .menu ul{
+        text-align: center;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        width: 100%;
+    }
+    .menu li{
+        padding: 5px;
+    }
+
+}
+/* Escritorio End*/    
