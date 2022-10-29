@@ -189,6 +189,7 @@ main{
 }
 /* Tablet Start*/
 @media (min-width: 576px) {
+    
     .hamburger {
         display: none;
     }
