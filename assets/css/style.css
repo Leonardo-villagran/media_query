@@ -58,7 +58,6 @@ main{
     text-align: center;
     grid-area: main;
     gap: 10px;
-    padding: 10px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -106,10 +105,23 @@ footer .textos{
 
 /*Footer End*/
 
+
+/*Main Start*/
+main{
+    padding: 10px;
+    text-align: center;
+    grid-area: main;
+    gap: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+}
+
 .grid{
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5% 10% 70% 5% 10%;
+    grid-template-rows: 10% 10% 65% 5% 10%;
     grid-template-areas:
     'header'
     'search'
@@ -169,8 +181,13 @@ footer .textos{
     padding: 8px;
 }
 /* Card end*/
-
-/* Escritorio Start*/
+.hamburger{
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items: flex-start;
+}
+/* Tablet Start*/
 @media (min-width: 576px) {
     .hamburger {
         display: none;
@@ -181,6 +198,17 @@ footer .textos{
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
+    }
+    .menu ul{
+        text-align: center;
+        display: flex;
+        flex-direction:row;
+        justify-content:flex-end;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .menu li{
+        padding: 5px;
     }
     .grid{
         display:grid;
@@ -197,22 +225,12 @@ footer .textos{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-   
-    .menu ul{
-        text-align: center;
-        display: flex;
-        flex-direction:row;
-        justify-content:flex-end;
-        align-items: flex-end;
-        width: 100%;
-    }
-    .menu li{
-        padding: 5px;
-    }
 
 
 }
+/* Tablet End */
 
+/* Desktop Start */
 @media (min-width: 992px) {
     .grid{
         display:grid;
@@ -257,4 +275,4 @@ footer .textos{
     }
 
 }
-/* Escritorio End*/    
+/* Desktop End */    
